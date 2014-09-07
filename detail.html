@@ -42,8 +42,9 @@
                     $(this).remove();
                     return false;
                 }
-                var now = total;
-                for (var i=(now+1); i<=(now+4); i+= ) {
+                var start = total+1;
+                var end   = end+4;
+                for (var i=start; i<=end; i+ ) {
                     $('<li style="margin-bottom: 10px;"><img src="images/wedding/'+i+'.jpg" style="width: 320px;"></li>')
                     total++;
                 }
