@@ -24,7 +24,7 @@
     </div>
       <div class="js_photobox" style="overflow: auto;width: 320px;height: 480px;margin: 0 auto;display: none;position: relative;">
     <img class="js_showqj" src = "images/button2.png" style="width: 204px;margin: 20px 0 10px 60px;">
-    <ul style="width: 320px;">
+    <ul style="width: 320px;" class="js_listBox">
     <li style="margin-bottom: 10px;"><img src="images/wedding/1.jpg" style="width: 320px;"></li>
     <li style="margin-bottom: 10px;"><img src="images/wedding/2.jpg" style="width: 320px;"></li>
     <li style="margin-bottom: 10px;"><img src="images/wedding/3.jpg" style="width: 320px;"></li>
@@ -45,7 +45,7 @@
                 var start = total+1;
                 var end   = end+4;
                 for (var i=start; i<=end; i++ ) {
-                    $('<li style="margin-bottom: 10px;"><img src="images/wedding/'+i+'.jpg" style="width: 320px;"></li>')
+                    $('<li style="margin-bottom: 10px;"><img src="images/wedding/'+i+'.jpg" style="width: 320px;"></li>').appendTo('.js_listBox');
                     total++;
                 }
             });
