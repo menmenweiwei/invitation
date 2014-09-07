@@ -26,16 +26,28 @@
     <img class="js_showqj" src = "images/button2.png" style="width: 204px;margin: 20px 0 10px 60px;">
     <ul style="width: 320px;">
     <li style="margin-bottom: 10px;"><img src="images/wedding/1.jpg" style="width: 320px;"></li>
-                                                                                             <li style="margin-bottom: 10px;"><img src="images/wedding/2.jpg" style="width: 320px;"></li>
-                                                                                                                                                                                      <li style="margin-bottom: 10px;"><img src="images/wedding/3.jpg" style="width: 320px;"></li>
-                                                                                                                                                                                                                                                                               <li style="margin-bottom: 10px;"><img src="images/wedding/4.jpg" style="width: 320px;"></li>
-                                                                                                                                                                                                                                                                                                                                                                        </ul>
-                                                                                                                                                                                                                                                                                                                                                                          <img class="js_loadMore" src = "images/button.png" style="width: 204px;margin: 10px 0 0 60px;">
+    <li style="margin-bottom: 10px;"><img src="images/wedding/2.jpg" style="width: 320px;"></li>
+    <li style="margin-bottom: 10px;"><img src="images/wedding/3.jpg" style="width: 320px;"></li>
+    <li style="margin-bottom: 10px;"><img src="images/wedding/4.jpg" style="width: 320px;"></li>
+    </ul>
+    <img class="js_loadMore" src = "images/button3.png" style="width: 204px;margin: 10px 0 0 60px;">
     <img class="js_showqj" src = "images/button2.png" style="width: 204px;margin: 10px 0 0 60px;">
     </div>
       </div>
         <script>
+            var total = 4;
         $(function(){
+            $('.js_loadMore').click(function(){
+                if (total >= 40) {
+                    $(this).remove();
+                    return false;
+                }
+                var now = total;
+                for (var i==(now+1); i<=(now+4); i+= ) {
+                    $('<li style="margin-bottom: 10px;"><img src="images/wedding/'+i+'.jpg" style="width: 320px;"></li>')
+                    total++;
+                }
+            });
     // 显示照片
        $('.js_showphoto').click(function(){
         $('.js_photobox').show();
